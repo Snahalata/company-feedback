@@ -1,3 +1,79 @@
-<p>
-  feedback works!
-</p>
+<form (ngSubmit)="sendFeedback()" #f = "ngForm">
+  <div class="container">
+    <div class="row">
+      <label class="form-label">What do u think about this.</label>
+    </div>
+    <div class="row">
+      <div class="form-check form-check-inline">
+          <input class="form-check-input"  [(ngModel)] ="feedback.performance"  type="radio" name="performance" id="p1" value="1">
+          <img src="../../assets/f1.jpg" width="40" height="40">
+          <input class="form-check-input" [(ngModel)] ="feedback.performance" type="radio" name="performance" id="p2" value="2">
+          <img src="../../assets/f2.jpg" width="40" height="40">
+          <input class="form-check-input" [(ngModel)] ="feedback.performance" type="radio" name="performance" id="p3" value="3">
+          <img src="../../assets/f3.jpg" width="40" height="40">
+          <input class="form-check-input" [(ngModel)] ="feedback.performance" type="radio" name="performance" id="p4" value="4">
+          <img src="../../assets/f4.jpg" width="40" height="40">
+          <input class="form-check-input"[(ngModel)] ="feedback.performance" type="radio" name="performance" id="p5" value="5">
+          <img src="../../assets/f5.jpg" width="40" height="40">
+
+          </div>
+    </div>
+    <div class="row">
+        <label class="form-label">What do u like to share with us.</label>
+    </div>
+    <div class="row">
+    <textarea id="address" name="idea" [(ngModel)] ="feedback.idea" rows="5" cols="30"></textarea>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" [(ngModel)] ="feedback.rate" name="rate" id="rate1" value="1">
+            <label class="form-check-label" for="rate1">1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio"  [(ngModel)] ="feedback.rate" name="rate" id="rate2" value="2">
+            <label class="form-check-label" for="rate2">2</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" [(ngModel)] ="feedback.rate" name="rate" id="rate3" value="3">
+              <label class="form-check-label" for="rate3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" [(ngModel)] ="feedback.rate" name="rate" id="rate4" value="4">
+              <label class="form-check-label" for="rate4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio"  [(ngModel)] ="feedback.rate" name="rate" id="rate5" value="5">
+                <label class="form-check-label" for="rate5">5</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" [(ngModel)] ="feedback.rate" name="rate" id="rate6" value="6">
+                <label class="form-check-label" for="rate6">6</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio"[(ngModel)] ="feedback.rate" name="rate" id="rate7" value="7">
+                  <label class="form-check-label" for="rate7">7</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" [(ngModel)] ="feedback.rate" name="rate" id="rate8" value="8">
+                  <label class="form-check-label" for="rate8">8</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" [(ngModel)] ="feedback.rate" name="rate" id="rate9" value="9">
+                    <label class="form-check-label" for="rate9">9</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" [(ngModel)] ="feedback.rate" name="rate" id="rate10" value="10">
+                      <label class="form-check-label" for="rate10">10</label>
+              </div>
+    </div>
+    <div class="row">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)] ="feedback.email" placeholder="Enter email">
+        </div>
+    </div>
+    <div class="row">
+      <button type="submit" class="btn btn-primary">submit</button>
+    </div>
+  </div>
+</form>

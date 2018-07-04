@@ -26,6 +26,7 @@ router.post('/',(req,res,next)=>{
      })
      .catch(next);
 });
+//update a feedback
 router.put('/:id',(req,res,next)=>{
     if(!objectId.isValid(req.params.id)){
         return res.json({status:false,message:"Invalid user id"});
@@ -46,6 +47,7 @@ router.put('/:id',(req,res,next)=>{
 
     
 });
+//delete a feedback
 router.delete('/:id',(req,res,next)=>{
     if(!objectId.isValid(req.params.id)){
         return res.json({status:false,msg:"Invalid user id"});
