@@ -22,7 +22,7 @@ export class FeedbackComponent implements OnInit {
     this.feedback = new Feedback();
     this.reply = new Reply();
   }
-  sendFeedback(f: NgForm) {
+  sendFeedback() {
     this.feedbackService.addFeedback(this.feedback).subscribe(data => {
       this.feedbackService.reply = data as Reply;
         alert(this.feedbackService.reply.message);

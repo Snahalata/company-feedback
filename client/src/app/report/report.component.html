@@ -1,3 +1,19 @@
-<p>
-  report works!
-</p>
+<div class="container">
+  <h1 class="text-center">Report of Feedback</h1>
+  <br>
+  <h3 class="text-right">Rate: {{rate}}</h3>
+  <table class="table table-bordered table-hover" >
+    <thead>
+      <th>Email</th>
+      <th>Message</th>
+      <th>performance</th>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let feed of feedbacks">
+        <td>{{feed.email}}</td>
+        <td>{{feed.idea}}</td>
+        <td>{{feed.performance}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
